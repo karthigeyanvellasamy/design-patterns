@@ -1,14 +1,13 @@
 package com.pattern.creational;
 
 /**
- * @author Karthigeyan Vellasamy
- * Factory Pattern
+ * @author Karthigeyan Vellasamy Factory Pattern
  */
 public class FactoryPattern {
 
 	public static void main(String[] args) {
 		AbstractTelecom company = TelecomFactory
-				.getDetails(TelecomCompany.BSNL);
+				.getDetails(TelecomCompany.AT_T);
 		company.getDetails();
 	}
 }
@@ -18,14 +17,12 @@ class TelecomFactory {
 
 	public static AbstractTelecom getDetails(TelecomCompany company) {
 		switch (company) {
-		case BSNL:
-			return new Bsnl(04, "3400Rs", "NO");
+		case AT_T:
+			return new Atnt(04, "8000$");
 		case VERIZON:
-
-			return new Verizon(03, "5000$", "YES");
+			return new Verizon(03, "5000$");
 		case TMOBILE:
-
-			return new TMobile(02, "6000$", "YES");
+			return new TMobile(02, "6000$");
 		}
 
 		return null;
@@ -38,28 +35,25 @@ abstract class AbstractTelecom {
 }
 
 enum TelecomCompany {
-	BSNL, VERIZON, TMOBILE
+	AT_T, VERIZON, TMOBILE
 }
 
-class Bsnl extends AbstractTelecom {
+class Atnt extends AbstractTelecom {
 
 	int rating;
 	String StockPrice;
-	String usProduct;
 
-	public Bsnl(int rating, String stockPrice, String usProduct) {
+	public Atnt(int rating, String stockPrice) {
 		super();
 		this.rating = rating;
 		StockPrice = stockPrice;
-		this.usProduct = usProduct;
 	}
 
 	@Override
 	public void getDetails() {
-		System.out.println("BSNL Details");
+		System.out.println("Atnt Details");
 		System.out.println("=====================");
-		System.out.println("Rating :" + rating + " StockPrice :" + StockPrice
-				+ " usProduct :" + usProduct);
+		System.out.println("Rating :" + rating + " StockPrice :" + StockPrice);
 	}
 
 }
@@ -68,21 +62,18 @@ class Verizon extends AbstractTelecom {
 
 	int rating;
 	String StockPrice;
-	String usProduct;
 
-	public Verizon(int rating, String stockPrice, String usProduct) {
+	public Verizon(int rating, String stockPrice) {
 		super();
 		this.rating = rating;
 		StockPrice = stockPrice;
-		this.usProduct = usProduct;
 	}
 
 	@Override
 	public void getDetails() {
 		System.out.println("Verizon Details");
 		System.out.println("=====================");
-		System.out.println("Rating :" + rating + " StockPrice :" + StockPrice
-				+ " usProduct :" + usProduct);
+		System.out.println("Rating :" + rating + " StockPrice :" + StockPrice);
 
 	}
 
@@ -92,21 +83,18 @@ class TMobile extends AbstractTelecom {
 
 	int rating;
 	String StockPrice;
-	String usProduct;
 
-	public TMobile(int rating, String stockPrice, String usProduct) {
+	public TMobile(int rating, String stockPrice) {
 		super();
 		this.rating = rating;
 		StockPrice = stockPrice;
-		this.usProduct = usProduct;
 	}
 
 	@Override
 	public void getDetails() {
 		System.out.println("TMobile Details");
 		System.out.println("=====================");
-		System.out.println("Rating :" + rating + " StockPrice :" + StockPrice
-				+ " usProduct :" + usProduct);
+		System.out.println("Rating :" + rating + " StockPrice :" + StockPrice);
 	}
 
 }
