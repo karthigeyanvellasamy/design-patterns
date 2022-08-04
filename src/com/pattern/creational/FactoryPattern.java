@@ -12,6 +12,11 @@ public class FactoryPattern {
 	}
 }
 
+
+enum TelecomCompany {
+	AT_T, VERIZON, TMOBILE
+}
+
 // Factory Method
 class TelecomFactory {
 
@@ -34,9 +39,6 @@ abstract class AbstractTelecom {
 	public abstract void getDetails();
 }
 
-enum TelecomCompany {
-	AT_T, VERIZON, TMOBILE
-}
 
 class Atnt extends AbstractTelecom {
 
