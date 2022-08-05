@@ -1,4 +1,4 @@
-package com.pattern.creational;
+package com.pattern.creational.factory;
 
 /**
  * @author Karthigeyan Vellasamy Factory Pattern

@@ -1,4 +1,4 @@
-package com.pattern.creational;
+package com.pattern.creational.singleton;
 
 /**
  * @author Karthigeyan Vellasamy

@@ -1,4 +1,4 @@
-package com.pattern.behavioral;
+package com.pattern.behavioral.temlatemethod;
 
 public class TemplateMethodPattern {
 	

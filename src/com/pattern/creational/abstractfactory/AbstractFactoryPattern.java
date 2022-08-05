@@ -1,4 +1,5 @@
-package com.pattern.creational;
+package com.pattern.creational.abstractfactory;
+
 
 public class AbstractFactoryPattern {
 	
